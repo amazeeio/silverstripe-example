@@ -21,4 +21,12 @@ RUN set -xe \
     && apk del .build-deps \
     && rm -rf /tmp/* /usr/local/lib/php/doc/* /var/cache/apk/*
 
+ENV SS_DEFAULT_ADMIN_USERNAME="admin"
+ENV SS_DEFAULT_ADMIN_PASSWORD="lag00n"
+ENV TEMP_FOLDER="/app/public/assets/tmp"
+
+# Copy sliverstripe config entrypoint
+COPY lagoon/ss-config.sh /lagoon/entrypoints/90-ss-config.sh
+RUN echo "source /lagoon/entrypoints/90-ss-config.sh" >> /home/.bashrc
+
 COPY --from=cli /app /app
