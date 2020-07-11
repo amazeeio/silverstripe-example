@@ -9,6 +9,7 @@ x-volumes:
     # Define all volumes you would like to have real-time mounted into the docker containers
     volumes:
       - .:/app:delegated
+      - assets:/app/public/assets
 
 x-environment:
   &default-environment
@@ -24,6 +25,10 @@ x-user:
   &default-user
     # The default user under which the containers should run. Change this if you are on linux and run with another user than id `1000`
     user: '1000'
+
+volumes:
+  assets:
+    {}
 
 services:
 

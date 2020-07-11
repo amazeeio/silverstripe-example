@@ -19,7 +19,8 @@ RUN set -xe \
     && rm -rf /tmp/* /usr/local/lib/php/doc/* /var/cache/apk/*
 
 COPY composer.json composer.lock /app/
-RUN composer install --no-dev
+RUN composer install --no-dev \
+    && mkdir -p app/public/assets
 COPY . /app
 
 # Define where the Drupal Root is located
