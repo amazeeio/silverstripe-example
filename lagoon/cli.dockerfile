@@ -22,6 +22,7 @@ COPY composer.json composer.lock /app/
 RUN composer install --no-dev \
     && mkdir -p app/public/assets
 COPY . /app
+RUN composer vendor-expose copy
 
 # Define where the Drupal Root is located
 ENV WEBROOT=public
