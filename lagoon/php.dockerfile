@@ -1,7 +1,7 @@
 ARG CLI_IMAGE
 FROM ${CLI_IMAGE} as cli
 
-FROM amazeeio/php:7.2-fpm
+FROM amazeeio/php:7.4-fpm
 
 RUN set -xe \
     && apk add --update \
