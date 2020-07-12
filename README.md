@@ -5,10 +5,13 @@ Base project folder for a SilverStripe ([http://silverstripe.org](http://silvers
 ## Installation ##
 
 ```
-docker-compose up -d
-docker-compose exec cli composer install
-docker-compose exec cli composer build
+cp .env.example .env \
+&& docker-compose up -d --build \
+&& docker-compose exec cli composer install \
+&& docker-compose exec cli composer build
 ```
+
+Local site URL: http://ss.docker.amazee.io
 
 See [Getting Started](https://docs.silverstripe.org/en/4/getting_started/) for more information.
 
