@@ -1,0 +1,20 @@
+Firesphere\SolrSearch\Services\SolrCoreService:
+    config:
+      endpoint:
+        myhostname:
+          host: solr
+          port: 8983
+          timeout: 10
+          # set up timeouts
+          index_timeout: 10
+          optimize_timeout: 100
+          finalize_timeout: 300
+          http_method: 'AUTO'
+          # commit within 60ms
+          commit_within: 60
+    # default path settings
+    store:
+      mode: 'file'
+      path: '/app/public/assets/.solr'
+    cpucores: 2
+    debug: false
