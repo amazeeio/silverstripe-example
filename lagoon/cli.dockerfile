@@ -1,4 +1,4 @@
-FROM amazeeio/php:7.4-cli
+FROM uselagoon/php-7.4-cli:latest
 
 RUN set -xe \
     && apk add --update \

@@ -92,7 +92,7 @@ services:
 
 
   mariadb:
-    image: amazeeio/mariadb
+    image: uselagoon/mariadb:latest
     labels:
       lagoon.type: mariadb
       lando.type: mariadb
@@ -103,7 +103,7 @@ services:
       << : *default-environment
 
   redis:
-    image: amazeeio/redis
+    image: uselagoon/redis-5:latest
     labels:
       lagoon.type: redis
       lando.type: redis
@@ -114,7 +114,7 @@ services:
       << : *default-environment
 
   solr:
-    image: amazeeio/solr:7.7
+    image: uselagoon/solr-7.7:latest
     labels:
       lagoon.type: solr
       lando.type: solr
@@ -124,7 +124,7 @@ services:
       << : *default-environment
 
   varnish:
-    image: amazeeio/varnish
+    image: uselagoon/varnish:latest
     labels:
       lagoon.type: varnish
       lando.type: varnish
