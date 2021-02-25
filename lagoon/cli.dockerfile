@@ -1,4 +1,4 @@
-FROM amazeeio/php:7.2-cli-drupal
+FROM uselagoon/php-7.4-cli-drupal:latest
 
 RUN set -xe \
     && apk add --update \
