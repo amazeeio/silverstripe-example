@@ -91,7 +91,7 @@ services:
 
 
   mariadb:
-    image: uselagoon/mariadb:latest
+    image: uselagoon/mariadb-10.5:latest
     labels:
       lagoon.type: mariadb
       lando.type: mariadb
